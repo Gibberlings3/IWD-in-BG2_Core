@@ -1,0 +1,41 @@
+[MYU3]
+***
+                       SOUND
+ATTACK          		 yanpr03a yanpr03b
+ATTACK          		 0 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 yanpr07a yanpr07b yanpr08a yanpr08b
+DAMAGE           		 0 0 0 0
+DIE                   		 yanpr09a yanpr09b
+DIE                   		 0 0
+HEAD_TURN            		 yanti11 nosound nosound nosound nosound
+HEAD_TURN                      2 0 0 0 0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	***
+ATTACK_SLASH                  	0
+ATTACK_BACKSLASH           	***
+ATTACK_BACKSLASH           	0
+ATTACK_JAB            		***
+ATTACK_JAB            		0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		 bf_md01 bf_md02 bf_md03 bf_md04 bf_md05 bf_md06
+SLEEP            		 0 0 0 0 0 0
+Battle_Cry           		 yanpr01 yanpr02
+Battle_Cry           		 0 0
+Selection            		 yanpr01 yanpr02
+Selection            		 0 0

@@ -1,0 +1,41 @@
+[µCG]
+***
+                       SOUND
+ATTACK          		 SMSAH03
+ATTACK          		 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 SMSAH07 SMSAH08 nosound
+DAMAGE           		 2 2 0
+DIE                   		 SMSAH09 SMSAH10 nosound
+DIE                   		 2 2 0
+HEAD_TURN            		***
+HEAD_TURN                     0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	 SMSAH03
+ATTACK_SLASH                  	 0
+ATTACK_BACKSLASH           	 SMSAH04
+ATTACK_BACKSLASH           	 0
+ATTACK_JAB            		 SMSAH06
+ATTACK_JAB            		 0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		***
+SLEEP            		0
+Battle_Cry           		 SMSAH01 SMSAH02
+Battle_Cry           		 0 0
+Selection            		***
+Selection            		0

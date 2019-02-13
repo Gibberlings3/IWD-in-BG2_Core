@@ -1,0 +1,41 @@
+[MWYV]
+***
+                       SOUND
+ATTACK          		 WYVSR03
+ATTACK          		 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 WYVSR07 WYVSR08
+DAMAGE           		 0 0
+DIE                   		 WYVSR09 WYVSR02
+DIE                   		 0 0
+HEAD_TURN            		***
+HEAD_TURN                     0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	 WYVSR05
+ATTACK_SLASH                  	 0
+ATTACK_BACKSLASH           	 WYVSR06
+ATTACK_BACKSLASH           	 0
+ATTACK_JAB            		 WYVSR06
+ATTACK_JAB            		 0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		***
+SLEEP            		0
+Battle_Cry           		 WYVRS01
+Battle_Cry           		 0
+Selection            		***
+Selection            		0

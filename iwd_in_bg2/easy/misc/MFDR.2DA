@@ -1,0 +1,41 @@
+Mfdr/Barbarian Warrior 2 (originally kuo-tai)
+***
+						SOUND
+ATTACK          		BARB03 BARB03 BARB04
+ATTACK          		2 0 0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		BARB07
+DAMAGE          		0
+DIE             		BARB09
+DIE             		0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		BARB03 nosound nosound
+ATTACK_SLASH    		2 0 0
+ATTACK_BACKSLASH		BARB03 nosound nosound
+ATTACK_BACKSLASH		2 0 0
+ATTACK_JAB      		BARB04 nosound nosound
+ATTACK_JAB      		2 0 0
+EMERGE          		***
+EMERGE          		0
+HIDE            		***
+HIDE            		0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry			BARB01 nosound
+Battle_Cry			0 0
+Selection                       nosound
+Selection                       0

@@ -1,0 +1,41 @@
+[MNO2]
+***
+                       SOUND
+ATTACK          		 orog03b orog03a
+ATTACK          		 0 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 orog07b orog07a orog08b orog08a
+DAMAGE           		 0 0 0 0
+DIE                   		 orog09 orog10
+DIE                   		 0 0
+HEAD_TURN            		 orog11 nosound nosound
+HEAD_TURN                      2 0 0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	 orog04b orog04a
+ATTACK_SLASH                  	 0 0
+ATTACK_BACKSLASH           	 orog04b orog04a
+ATTACK_BACKSLASH           	 0 0
+ATTACK_JAB            		***
+ATTACK_JAB            		0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		 bf_md01 bf_md02 bf_md03 bf_md04 bf_md05 bf_md06
+SLEEP            		 0 0 0 0 0 0
+Battle_Cry           		 orog01 orog02
+Battle_Cry           		 0 0
+Selection            		 orog01 orog02
+Selection            		 0 0

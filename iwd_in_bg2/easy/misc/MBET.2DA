@@ -1,0 +1,41 @@
+[MBET]
+***
+                       SOUND
+ATTACK          		 beetl03a beetl03b beetl11
+ATTACK          		 0 0 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 beetl07 beetl08
+DAMAGE           		 0 0
+DIE                   		 beetl09
+DIE                   		 0
+HEAD_TURN            		 beetl11 nosound nosound nosound nosound
+HEAD_TURN                      2 0 0 0 0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	***
+ATTACK_SLASH                  	0
+ATTACK_BACKSLASH           	***
+ATTACK_BACKSLASH           	0
+ATTACK_JAB            		***
+ATTACK_JAB            		0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		 bf_sm01 bf_sm02 bf_sm03 bf_sm04 bf_sm05
+SLEEP            		 0 0 0 0 0
+Battle_Cry           		 beetl01 beetl02a beetl02b
+Battle_Cry           		 0 0 0
+Selection            		 beetl01 beetl02
+Selection            		 0 0

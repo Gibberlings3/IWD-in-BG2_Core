@@ -1,0 +1,41 @@
+[MMUM]
+***
+                       SOUND
+ATTACK          		 mummy03a mummy03b
+ATTACK          		 0 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 mummy07a mummy07b
+DAMAGE           		 0 0
+DIE                   		 mummy09 mummy09b
+DIE                   		 0 0
+HEAD_TURN            		 mummy11 nosound nosound
+HEAD_TURN                      2 0 0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	 mummy04a mummy04b
+ATTACK_SLASH                  	 0 0
+ATTACK_BACKSLASH           	 mummy04a mummy04b
+ATTACK_BACKSLASH           	 0 0
+ATTACK_JAB            		***
+ATTACK_JAB            		0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		 bf_sm01 bf_sm02 bf_sm03 bf_sm04 bf_sm05
+SLEEP            		 0 0 0 0 0
+Battle_Cry           		 mummy01 mummy02
+Battle_Cry           		 0 0
+Selection            		 mummy01 mummy02
+Selection            		 0 0

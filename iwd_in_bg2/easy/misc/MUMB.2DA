@@ -1,0 +1,41 @@
+Mumb/Umber Hulk, Vodyanoi (originally umber hulk)
+***
+						SOUND
+ATTACK          		VODYA03 VODYA03 VODYA04
+ATTACK          		2 0 0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		VODYA07 VODYA08
+DAMAGE          		0 0
+DIE             		VODYA09 VODYA10
+DIE             		0 0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		VODYA11
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		VODYA03 nosound nosound
+ATTACK_SLASH    		2 0 0
+ATTACK_BACKSLASH		VODYA03 nosound nosound
+ATTACK_BACKSLASH		2 0 0
+ATTACK_JAB      		VODYA04 nosound nosound
+ATTACK_JAB      		2 0 0
+EMERGE          		***
+EMERGE          		0
+HIDE            		***
+HIDE            		0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry			VODYA01 nosound
+Battle_Cry			0 0
+Selection                       nosound
+Selection                       0

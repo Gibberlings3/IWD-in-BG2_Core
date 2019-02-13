@@ -1,0 +1,359 @@
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Icewind Dale in Baldur's Gate II</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="backup/g3readme.css" type="text/css" />
+<link href="backup/g3.ico" rel="icon" type="image/bmp" />
+</head>
+<body> 
+<h1> Icewind Dale in Baldur's Gate II </h1>
+<div class="section"> 
+  <p><strong><a href="http://www.gibberlings3.net/">A Gibberlings Three Mod</a></strong><br />
+    <p><strong>Principal Authors:</strong> CamDawg, DavidW</p>
+    <p><strong>Contributing Authors:</strong> LadeJarl (GUI), Nythrun (spell and projectile conversion and miscellaneous coding advice)</p>
+  <p><strong> Version 8</strong><br />
+    <strong> Languages:</strong> English<br />
+    <strong> Platforms: </strong>Windows</p>
+</div>
+<h2>Overview</h2> 
+<div class="section"> 
+  <p> This mod converts Icewind Dale to run in the Baldur's Gate II engine, permitting dual wielding, kits, sorcerers, monks, barbarians and the like,
+  and offering a better platform for joinable NPCs.</p> 
+  <p>The mod requires a complete install of Icewind Dale, Heart of Fury, Test of the Luremaster, Baldur's Gate II, and Throne of Bhaal.</p>
+  <p>The mod is currently in BETA and certainly contains bugs. Please report any you find at the Gibberlings 3 forums.</p>
+  <p>The mod is designed for the original BG2 engine, and does not work on the BGEE or BG2EE engines.</p>
+</div>
+<h2> Compatibility </h2>
+<div class="section"> 
+  <p> For obvious reasons, Icewind Dale in Baldur's Gate II is incompatible with most mods for Baldur's Gate II. It is known to be compatible with the Widescreen Mod; there is a reasonable
+  chance that it will be compatible with tweak or kit mods.</p>
+  <p> Icewind Dale in Baldur's Gate II is incompatible with any Icewind Dale mod that has not been specifically designed for it. At present, the only such mods are
+  the IWD-in-BG2 Fixpack/Tweakpack (available at <a href="www.gibberlings3.net">www.gibberlings3.net</a>; should be installed straight after the main mod), 
+  Kulyok's "Icewind Dale NPCs" (available at <a href="www.pocketplane.net">www.pocketplane.net</a> and CamDawg's "Unfinished Business for Icewind Dale" 
+  and "Icewind Dale Item Upgrades" (available
+  at <a href="www.gibberlings3.net">www.gibberlings3.net</a>).</p>
+</div>
+<h2> Languages </h2>
+<div class="section"> 
+  <p> At present, IWD-in-BG2 itself is in English only. However, it should be compatible with non-English versions of IWD. Other than a very small number (fewer than 10) of strings that are in English, it should work fine in other languages.</p>
+</div>
+
+<h2> Installation </h2>
+<div class="section">
+  <p>
+  You will need:
+  <ul>
+      <li>A full, unmodded install of Icewind Dale, together with the Heart of Winter expansion and the Test of the Luremaster downloadable expansion. (The Good Old Games version has all of this.)</li>
+      <li>A full, unmodded install of Baldur's Gate II, together with the Throne of Bhaal expansion. (Actually, a modded one will probably work too, but I don't guarantee it.)</li>
+      <li>A Windows PC with several GB of spare space. (I don't know exactly how much is needed. 10 is fine.)</li>
+  </ul>
+  </p>
+  <p>
+  Run the Icewind Dale in Baldur's Gate II program (as an administrator for preference, if using Windows Vista/7/8) and extract the files to a <b>new</b> directory. (On Vista or Windows 7, avoid choosing a directory in the "Program Files" folder).
+  When prompted, enter the paths to your Baldur's Gate II installation. After a couple of minutes, you will be prompted to enter your Icewind Dale installation; do so. Then go and get a coffee. (Installation will take 15 minutes or more, depending on your computer.)</p>
+  <p><strong>Important</strong>: about 5 minutes into the installation, the <b>final movie of Heart of Winter will play</b>. This is intentional. Since it contains spoilers, turn the sound down and look away in the (unlikely) event that you haven't already seen it.</p>
+  </p>
+  <p>After the mod has installed, you should download and install the "Icewind-Dale-in-Baldur's-Gate-II Fixpack/Tweakpack", from <a href="www.gibberlings3.net">www.gibberlings3.net</a>. The first component of this contains any current hotfixes to the mod. The rest contains
+  options to customise your installation, mostly concerning how much you want the mod to play like Icewind Dale and how much like Baldur's Gate II.</p>
+   </div>
+<h2>Your Party</h2>
+<div class="section">
+  <p>
+  By default, IWD-in-BG2 (because it uses the BG2 engine) assumes that you will generate a single PC. This will make the game fairly difficult. Your options for a party are:
+  <ol>
+  <li>Create a multi-player party, like the original IWD. To do this, start a multi-player game and create your party. As soon as you start the game, <b>save</b>, and then quit the game. Move your savegame folder from the "MPSAVE" directory to the "SAVES" directory. Then restart the game and load this save as a single-player game. This will lead to a rather smoother game experience.</li>
+  <li>Use the basic NPCs available in the IWD-in-BG2 Fixpack/Tweakpack. This gives you access to 11 basic NPCs, created using IWD's portraits and soundsets. They're slightly more detailed than typical BG1 NPCs, but not nearly as detailed as BG2 NPCs.</li>
+  <li>Download a mod or mods that add fully developed BG2-style NPCs. At present there is only one such mod: Kulyok's "Icewind Dale NPCs", which adds five NPCs to the game and is compatible with IWD-in-BG2.</li>
+  </ol>
+  </p>
+  <p>
+  Note that by default, the game ends only when the entire party is dead, and NPCs initiate conversation with whichever party member talks to them (i.e., not necessarily with your main character). This is to mirror IWD behaviour; it can, however, be modified using the Fixpack/Tweakpack.
+  </p>
+</div>
+<h2> Known Issues </h2>
+<div class="section">
+<p>
+These are the main issues (a more complete list can be found at the mod's forums).
+<ul>
+<li>A small number of spells cannot currently be converted at all. The current list is: Seven Eyes, Soul Eater, (Great) Shout, Mordenkainen's Force Missiles, Spiritual Wrath, Mold Touch, Wall of Moonlight, and Smashing Wave. Items that cast these spells are also not converted. </li>
+<li>A few other spells are converted a bit suboptimally, and don't work quite the way they did in IWD. The current list is Power Word: Stun, Power Word: Kill, Blood Rage, Animal Rage, Chain Lightning, Static Charge, and Whirlwind.<.li>
+<li>The IWD dragon animation cannot straightforwardly be converted. We make do with the BG2 silver dragon animation.</li>
+<li>The spell animations often have a sort of glow around them that is a bit unattractive. This seems to be something about how the BG2 engine handles transparency (equivalent graphics look way better on BG:EE).</li>
+</ul>
+</p>
+</div>
+<h2>Tools used</h2>
+<div class="section"> 
+  <p>IWD-in-BG2 could not have been achieved without the following tools and resources, developed over ten years of modding the Infinity Engine:</p>
+  <ul>
+  <li><a href="http://forums.pocketplane.net/index.php/board,44.0.html">WEIDU</a> (Wesley Weimer and TheBigg)</li>
+  <li>The <a href="iesdp.gibberlings3.net">Infinity Engine Structure Description Project</a> (many contributors)</li>
+  <li><a href="http://forums.pocketplane.net/index.php/board,85.0.html">Near Infinity</a> (Jon Hauglid)</li>
+  <li><a href="http://www.gibberlings3.net/tools/dltcep.php">DLTCEP</a> (Avenger)</li>
+  <li><a href="http://www.pocketplane.net/mambo/index.php?option=content&task=blogcategory&id=143&Itemid=98">BG1TUTU</a> (Japheth)</li>
+  <li><a href="http://www.usoutpost31.com/easytutu/">EasyTutu</a> (Macready)</li>
+  <li><a href="http://www.spellholdstudios.net/ie/bgt">BGT-WEIDU</a>, especially the tis2bg2 utility (Ascension64 and King Diamond)</li>
+  <li>ACM2MVE (ABel and Team)</li>
+  <li>The <a href="http://www.gibberlings3.net/bg2fixpack/">BG2 fixpack</a> (multiple authors)</li>
+  <li>The <a href="http://www.gibberlings3.net/iwd_fixpack/">IWD fixpack</a> (CamDawg)</li>
+  <li><a href="http://www.spellholdstudios.net/ie/infinityanimations">Infinity Animations</a> (Erephine, with WEIDU coding by Miloch)</li>
+  <li><a href="http://www.spellholdstudios.net/ie/tobex">ToBEx</a> (Ascension64)</li>
+  </ul>
+  </p>
+  <p>"If I have seen so far, it is because I have stood upon the shoulders of giants" - Isaac Newton.</p>
+  </div>
+  <h2>Acknowledgments</h2>
+  <div class="section">
+  <p>Many thanks to our testers, especially the indefatigable Grogerson; thanks also to Hannah Wallace for producing the IWD-in-BG2 start screen.</p>
+
+  </div>
+
+  </div>
+<h2> Copyright Information </h2> 
+<div class="section"> 
+  <p>You are welcome to borrow content from this mod, provided that you acknowledge its authors and the authors of the tools on which it relies. Please do not mirror the mod, though.</p>
+  <p>Baldur's Gate II and Icewind Dale remain the copyright of their respective creators and their legal successors.</p>
+  </p>
+</div> 
+<h2> Version History </h2>
+<div class="section">
+<p><strong> Version 8 - August 2013</strong></p>
+<ul>
+<li>Incorporated the range of bugfixes in FP 7.1-7.13 - see <a href=http://forums.gibberlings3.net/index.php?showtopic=23715>here</a>, with the most substantive changes (as opposed to isolated bugfixes) listed below.</li>
+<li>Updated WEIDU and ToBEx.</li>
+<li>Incorporated the new IWD fixpack.</li>
+<li>Blocked HLAs.</li>
+<li>Systematically restructured the way hidden creatures are handled - they are now spawned by the area script, a la BG2.</li>
+<li>Innates now correctly set as L1, and thus useable.</li>
+<li>Moved over to using ToBEx to remove BG2 spells.</li>
+<li>Stopped imposing the SoA level cap.</li>
+<li>Fixed the broken sahuagin animations that were causing crashes in the Temple. (Some but not all of these were fixed in v7.)</li>
+<li>Hopefully (touch wood!) eliminated map crashes.</li>
+<li>Corrected the implementation of Infinity Animations to avoid some crashes.</li>
+<li>Hjollder is no longer invisible after wind walking.</li>
+<li>The Spectral Heroes in the Luremaster's Keep now spawn correctly, with new ones appearing once old ones die.</li>
+<li>Various ilusionary walls have been filled in with actual stone.</li>
+<li>Seth (and others) should now leave the area properly when they try to.</li>
+<li>Hobart isn't duplicated in the Whistling Gallows.</li>
+<li>Cavaliers can use gloves.</li>
+<li>Eldathin now use their spells correctly.</li>
+<li>Stair triggers in AR6004 now display correctly.</li>
+<li>Certain priest spells marked as unusable by non Lawful/Chaotic characters are now correctly marked as unusable by non-GoodEvil characters.</li>
+<li>Fixed the Staff of Moradin's Breath and the Bone Talisman.</li>
+<li>Corrected some glitches in the conversion of Stoneskin.</li>
+<li>Difficulty-related spawning should now happen more smoothly.</li> 
+<li>Ice Storm now duplicates the effect of the BG2 version.</li>
+<li>Corrected a bug in the projectile converter whereby ally-only effects were affecting both sides.</li>
+<li>Slightly tweaked the way the new resources are distributed (the override directory will now start out empty.</li>
+<li>Proficiency string converter is now idempotent (all components run during Easy-type installation need to be or wackiness ensues).</li>
+<li>Got a couple of days in to a systematic recoding and modernising of the hideous tangle of code that this mod has begun before realising I'd seriously underestimated the time needed. Another time...</li>
+</ul>
+
+  <p><strong> Version 7 - December 30, 2011</strong></p>
+  <ul>
+<li>rebuilt local version of v6 from Easyv6, Cam's fixpack and local v4 (sigh)</li>
+<li>fixed typo that was preventing random loot appearing in containers</li>
+<li>tweaked the character generation GUI to look better</li>
+<li>cone of cold's projectiles worked fine in the main converter but weren't being copied over to the Easy version</li>
+<li>edited the strings used at character generation for specialist mages to match the actual UI</li>
+<li>reverted Blindness to 1st level, so that illusionists can actually select a first-level spell and get off the CG screen</li>
+<li>
+identified and rectified a systematic error in the mapping of ChangeCurrentScript(), based on a mislabelling of Actor scripts in ARE files by NI.</li>
+<li>
+fixed a vanilla-game problem where Therik didn't initiate conversation if you returned to AR3301.</li>
+<li>
+added hand-management of random ammunition, since the automated method doesn't handle multiple items well.</li>
+<li>
+fixed a bug in sound conversion that wasn't mapping creatures random "twitch" sounds over properly.</li>
+<li>
+opcode 59 (stealth) now boosts both Move Silently and Hide In Shadows.</li>
+<li>
+corrected glitch in vanilla IWD that was preventing Hold Monster's icon from being visible in the conversion.</li>
+<li>
+Flozem now reliably drops his inventory (fix to dflozem.dlg).</li>
+<li>
+We now map ForceHide() to an autocasting of silent invisibility, rather than the unreliable Hide().</li>
+<li>
+Fixed a dialog bug where Valestis only wanted 3 items to brighten the arboretum. (It's inexplicable to me how the original ever worked but it did.)</li>
+<li>
+Caught still more XPVar strings that the converter was missing.</li>
+<li>
+slightly tweaked the logic of Cam's OnIsland() workaround.</li>
+<li>
+Greater Werewolf is now immune to normal weapns (vanilla IWD bug).</li>
+<li>
+Fixed an error in the .ini converter, which inter alia was preventing Hobart from appearing.</li>
+<li>
+Faked the hard-coded "spawn Hobart" global variable which IWD sets on start.</li>
+<li>
+sped up the go-see-Wylfdene cutscene, so the camera keeps up with the player</li>
+<li>
+made sure Angaar ends up in the right place</li>
+<li>
+replaced "2haxe" with "i#axe", since items beginning with a number are hard-coded to be replaced with gold.</li>
+<li>
+fixed typos that stopped the "close Luremaster tower staircases" fix from working.</li>
+<li>
+Luremaster Keep temple of Helm added to the list of areas where an area transition needs to be disabled.</li>
+<li>
+added a fix for the area transition in AR9701 (cloned from the AR9703 transition and pasted into the v5-residual component. Yes, this is structurally inelegant; so sue me).</li>
+<li>
+the auto-generated variables used in the .ini file converter were longer than 32 characters in a couple of cases (leading, notably, to the continuously spawning jellies in AR9707).</li>
+<li>
+While IWD Hidden() creatures can initiate dialog, BG2 Deactivate()d creatures can't. We work around this for the Magic Mouth.</li>
+<li>
+Some old code was trying to "fix" a few minimaps which now work fine, and was just breaking them (this was causing crashes in AR8004, AR8005, AR9601, AR9711 and AR9712).</li>
+<li>
+Death variables are no longer illegally set to >32 characters</li>
+<li>
+druids can now revert to natural form (the "natural form" shapeshift had been omitted from the list in the "Characters" component)</li>
+<li>
+most (not quite all) exits are now NPC-impassible (the other way around is breaking far too much)</li>
+<li>
+moved Cam's item description fix to be run as part of Easy install, since it edits dialog.tlk</li>
+<li>
+shifted the animation converter to use Infinity Animations technology</li>
+<li>
+ice golems in Icasaracht's Temple now go hostile if party attempt to pass them</li>
+<li>
+ice golems now have correct foot circle.</li>
+<li>
+worked around the awkward foot-circle size for olive slimes (slimes no longer overlap; slimes that can't fit through doors get replaced with zombies)</li>
+<li>
+fixed a slight glitch in the conversion of opcode 67 (inter alia, this was stopping the Icas. gem from summoning vodyanoi)</li>
+<li>
+rewritten Icas. combat and cutscene scripts to avoid various glitches</li>
+<li>
+slight improvement to script replacements: we now (try to) identify MoveToObject([PC]) commands that are supposed to work when the player isn't in sight</li>
+<li>
+the manually-changed version of D4INFMOV predated the general mapping of MoveToObject([PC][0.0.10000.10000]) to MoveToObject(Player1)</li>
+<li>
+the transition from the Sea of Moving Ice back to Kuldahar now works more smoothly</li>
+<li>
+sorted out some glitches with Bandoth's use of spells in combat</li>
+<li>
+small tweaks to the range of the Zombie Lord Aura effect</li>
+<li>
+tweaked the gui and ToBEx settings for mutual compatibility</li>
+<li>
+disabled the ToBEx Arena mode by default</li>
+<li>
+disabled the tutorial (which crashes the game). [The tutorial button cannot be disabled, but it can be made invisible, and if pressed anyway, it just explains that the tutorial is unavailable.)</li>
+<li>
+worked around the fact that in multiplayer games, the savegame does not seem to store information on deactivated creatures</li>
+<li>
+tweaked the start-of-game screen to warn players to play in single-player mode where possible</li>
+<li>
+players no longer gain Slayer Change in expansion-only games</li>
+<li>
+fixed a vanilla bug whereby a snow troll in AR7002 gets no script (this was invisible in IWD because he starts hidden)</li>
+<li>
+fixed a little glitch in Cam's version of the AR9603 search map.</li>
+  </ul>
+  <p><strong> Version 6 - April 17, 2011</strong></p>
+  <ul>
+  <li>
+   added a bit more robustness to the animation converter</li>
+<li>
+Wylfdene's death scene is now included in his animation</li>
+<li>
+Fallen rangers and paladins no longer get abilities (incorporated from FP)</li>
+<li>
+Replaced bug-causing IETME-generated minimaps with functional DLTCEP ones (inc. from FP)</li>
+<li>
+incorporated ChangeCurrentScript fixes into ChangeCurrentScript component of main converter (component 310)</li>
+<li>
+added FP fix to make Tempus Temple door nonbypassable to component 650</li>
+<li>
+corrected errors in script voiding and incorporated additional FP script-voiding into main component 310</li>
+<li>
+added FP fixes/additions to original script converter (Protagonist, CheckPartyAverageLevel) into scripting_replacements.tpa</li>
+<li>
+scripting_replacements.tpa now fixes problems caused by duplicate spell entries in spell.ids</li>
+<li>
+corrected errors on Difficulty in scripting_replacements.tpa</li>
+<li>
+fixed typo in state_icon_map.2da that was mapping regeneration to the bardsong icon (obviates FP fixes)</li>
+<li>
+main converter no longer removes Three White Doves (obviates FP restoration of it)</li>
+<li>
+fixed two bugs in Evasion code (obviates FP fix of those bugs)</li>
+<li>
+added the areas missed by the original transition algorithim, obviating the need to do them in FP</li>
+<li>
+copied over some missing files from the original BG2 directory</li>
+<li>
+restructured CreatureHidden component to use Cam's discovery of bit 19</li>
+<li>
+restructured DV component to distinguish between secondary DVs (which are set) and tertiary DVs (which are incremented)</li>
+<li>
+DV code now checks to avoid infinite loops (like the ULIGAR loop)</li>
+<li>
+Everard no longer included on the list of hidden creatures</li>
+<li>
+Removed superfluous fix enabling the attack on Kuldahar (long since subsumed by secondary and tertiary DVs)</li>
+<li>
+Following Cam's suggestion, we now let instances of creatures in area files acquire their script names from 
+the ARE file rather than cloning them. Concomitant rewriting of DV code. Obviating of a couple of FP fixes.</li>
+<li>
+Added ToBEx</li>
+<li>
+Reconfigured random drops to use ToBEx rather than my previous (suboptimal) workaround, obviating a FP fix</li>
+<li>
+Fixed a couple of errors in the GUI for 800x640 resolution</li>
+<li>
+Using ToBEx, improved conversion of Cat's Grace, Strength, the Ring of Edion, Kossuth's Blood, and Kontik's Ring. (En passant, this fixes a bug with Kossuth's Blood's description which was 
+caught by Grogerson)</li>
+<li>
+Incorporated FP Movie description fix into main converter, en route changing string change from "intro" to "Heart of Winter intro" and wiping existing BG2 movies out of baldur.ini</li>
+<li>
+Incorporated <CHARNAME>=> <GABBER> FP fix into main converter string fix component (rationale: it needs to be run in an EasyIceTutu run, as it edits Dialog.tlk)</li>
+<li>
+Deprecated FP blocking of areas being NPC-passable (this is a tricky issue, to discuss with Cam, may need to be reverted the problem is that creatures on a LeaveArea or EscapeArea aren't finding
+anywhere to go and so wander aimlessly before vanishing)</li>
+<li>
+INCLUDEd residual fixes in FP 5.4 into core converter, unchanged except for deprecation of NPC-impassability, above </li>
+<li>
+fixed a problem with SavedLocation and the ice golems guarding Icas's lair</li>
+<li>
+clouds can no longer be Evaded (this confuses the hell out of the code)</li>
+<li>
+death fog is now included in the cloud conversion code</li>
+<li>
+fixed the conversion of opcode 259</li>
+<li>
+tweaked the conversion of AddXPVar, which was missing some cases where the string was set to zero (IWD 0 = "Beetle", so it's important not to convert this into a DisplayString)</li>
+<li>
+fixed a bug in the code that locks the trapdoors in the LM's keep</li>
+<li>
+bard songs now affect whole party </li>
+<li>
+fixed a bug in converting opcode 206 which was making Wailing Virgin spells useless</li>
+<li>
+sorted out what happens after Icas is killed (i.e., play credits if in expansion, teleport back to Kuldahar if in main game)</li>
+<li>
+rearranged the animation maps a bit so that barbarians don't lose out on their weapons and shields</li>
+<li>
+fixed a bug in the opcode converter which would have crashed Cloudburst if something else wasn't already crashing it</li>
+  </ul>
+  <p><strong>Versions 5.1-5.4 - January-April 2011</strong></p>
+  <p>These are the four incremental fixpacks released by CamDawg for version 5. See <a href="http://forums.gibberlings3.net/index.php?showtopic=21538">this thread</a> for detailed changelog.</p>
+    <p><strong> Version 5 - December 19, 2010</strong></p>
+  <p>No systematic changelog is available. For a partial list of fixes, see <a href="http://forums.gibberlings3.net/index.php?showtopic=17335">this thread.</a></p>
+    <p><strong> Version 4 - May 5, 2009</strong></p>
+  <p>No systematic changelog is available. </p>
+    <p><strong> Version 3 - May 1, 2009</strong></p>
+  <p>No systematic changelog is available - though, for reference, this is the first version to be released with an EasyTutu-style installer.</p>
+    <p><strong> Version 2 - April 18, 2009</strong></p>
+  <p>No systematic changelog is available.</p>
+      <p><strong> Version 1 - April 15, 2009</strong></p>
+  <p>No systematic changelog is available -though, for reference, this is the first version released by David, and the first version that purported to be a playable beta rather than a proof-of-concept alpha. (This turned out to be optimistic.)</p>
+      <p><strong> Version alpha-negative-18 - April 1, 2008</strong></p>
+    <p>Cam's original public release.</p>
+
+  </div>
+</body>
+</html>

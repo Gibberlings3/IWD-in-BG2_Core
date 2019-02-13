@@ -1,0 +1,43 @@
+// this is the core of Infinity Animations, stripped down to remove everything pertaining to a modded game (since we control the install framework)
+
+
+OUTER_SET skip = 0 //Executable validity check
+COPY ~BGMain.exe~ ~BGMain.exe~
+  sz = SOURCE_SIZE
+  READ_LONG 0x40742c c1
+  READ_LONG 0x40a8da c2
+  PATCH_IF sz > 0x7536e6 BEGIN
+    READ_LONG 0x7536e7 c3
+  END ELSE BEGIN
+    c3 = 0
+  END
+  READ_BYTE 0x4595c9 c4
+BUT_ONLY
+
+ACTION_IF (c1 = 0x3db6d84) AND (c2 = 0xc6004c48) AND (c3 = 0x54464958) AND (c4 = 0xf9) AND (sz = 0x77a02e) BEGIN
+  OUTER_SET skip = 1
+  PRINT ~IA notice: BGMain.exe appears to be patched already; skipping .exe modifications ... ~
+END ELSE BEGIN
+  ACTION_IF (c1 != 0xb48f) OR (c2 != 0x3d7c1) OR (c3 != 0x53505700) OR (sz != 0x77a02e) BEGIN
+    ACTION_IF (c1 = 0x3db6d84) AND (c2 = 0xc6004c48) AND (c3 = 0x54464958) AND (c4 = 0xfc) AND (sz = 0x77a02e) BEGIN
+      OUTER_SET skip = 0
+    END ELSE BEGIN
+      FAIL ~IA notice: BGMain.exe not valid - make sure you have a ToB .exe patched to v26498!~
+    END
+  END
+END
+
+ACTION_IF skip = 0 BEGIN
+  PRINT ~IA notice: Patching BGMain.exe to enable new animations ...~
+  COPY ~BGMain.exe~ ~BGMain.exe~
+    PATCH_INCLUDE ~iwd_in_bg2/ia/t-exe_patch.tpp~
+  BUT_ONLY
+END
+
+PRINT ~IA: patching IDS files ...~
+OUTER_PATCH wlib BEGIN
+  WRITE_LONG 0x0 0x090a0d20
+  READ_ASCII 0x0 ws(4) //detects any whitespace
+END
+INCLUDE ~iwd_in_bg2/ia/t-animate.tpa~
+INCLUDE ~iwd_in_bg2/ia/t-anisnd.tpa~

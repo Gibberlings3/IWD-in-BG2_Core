@@ -1,0 +1,337 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//// Renaming and copying
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+DEFINE_PATCH_FUNCTION rename_and_log
+   STR_VAR from=""
+           to=""
+BEGIN
+   INNER_ACTION BEGIN
+      LAF rename_and_log STR_VAR from to END
+   END
+END
+
+DEFINE_ACTION_FUNCTION rename_and_log
+   STR_VAR from=""
+           to=""
+BEGIN
+  ACTION_IF FILE_EXISTS ~%iwdfiles%/%from%~ BEGIN
+   COPY ~%iwdfiles%/%from%~ ~%iwdfiles%/%to%~
+   APPEND_OUTER ~%iwdlists%/rename_copy.tpa~ ~"%iwdfiles%/%from%" "%iwdfiles%/%to%"~
+  END ELSE BEGIN
+     LAF action_display_warning STR_VAR warning=EVALUATE_BUFFER "tried to copy and rename %iwdfiles%/%from% but it doesn't exist" END
+  END
+END
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+DEFINE_ACTION_FUNCTION auto_rename_log
+   STR_VAR old="" 
+           type="" 
+           loc_old=""
+           loc_new=""
+   RET new
+BEGIN
+   OUTER_INNER_PATCH ~~ BEGIN
+      LPF auto_rename_log STR_VAR old type loc_old loc_new RET new=new END
+   END
+END
+
+DEFINE_PATCH_FUNCTION auto_rename_log
+   STR_VAR old=""
+           type="" 
+           loc_old=""
+           loc_new=""
+   RET new
+BEGIN
+      LPF make_new_name STR_VAR old type RET new=new END
+      LPF rename_and_log STR_VAR from=EVALUATE_BUFFER ~%loc_old%/%old%.%type%~ to=EVALUATE_BUFFER ~%loc_new%/%new%.%type%~ END
+END
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+DEFINE_PATCH_FUNCTION make_new_name
+  STR_VAR old=""
+          type=""
+  RET new
+BEGIN
+
+//// Our algorithm is pretty simple-minded (less clever than TUTU). It takes as input the strings "rename_oldname"
+//// and rename_filetype and outputs "rename_newname"
+
+        TO_LOWER ~old~
+	TO_LOWER ~type~
+
+
+
+//// start by reading in the story so far
+
+        INNER_ACTION BEGIN
+           ACTION_IF !FILE_EXISTS ~%iwdlists%/rename_record.2da~ BEGIN
+               COPY ~.../stratagems-inline/blank~ ~%iwdlists%/rename_record.2da~
+           END
+           COPY - ~%iwdlists%/rename_record.2da~ ~%workspace%~
+            READ_2DA_ENTRIES_NOW rename_array 2
+            FOR (i=0;i<rename_array;i+=1) BEGIN
+               READ_2DA_ENTRY_FORMER rename_array i 0 temp_old
+               READ_2DA_ENTRY_FORMER rename_array i 1 temp_new
+               SPRINT $rename_name_map(~%temp_old%~) ~%temp_new%~
+               SPRINT $name_used_map(~%temp_new%~) ~~
+            END
+           BUT_ONLY
+        END
+
+//// before doing anything else, check if it's already renamed. If so, we're done.
+
+	PATCH_IF VARIABLE_IS_SET $rename_name_map(EVALUATE_BUFFER ~%old%.%type%~) THEN BEGIN
+		SPRINT ~new_full~ $rename_name_map(EVALUATE_BUFFER ~%old%.%type%~)
+		INNER_PATCH_SAVE new ~%new_full%~ BEGIN
+		   DELETE_BYTES (BUFFER_LENGTH - 4) 4
+		END
+	END ELSE BEGIN
+
+
+//// First, see if it's less than 8 letters long. If it is, shove a hash (#) at the front of it; 
+//// if it's eight letters long, replace the first letter with a hash.
+
+		SET ~length~=STRING_LENGTH ~%old%~
+
+		PATCH_IF ~length~<8 THEN BEGIN
+			SPRINT ~new~ ~#~ ^ ~%old%~
+		END ELSE BEGIN
+			INNER_PATCH_SAVE ~new~ ~%old%~ BEGIN
+				WRITE_ASCII 0x0 ~#~ #1
+			END
+		END
+
+
+//// Then, see if this name has been used. If it hasn't, set the
+//// hash to show it has now, and use the name. If it has, we use a standard name: hash followed by
+//// a number. The number is stored in the file rename_number.2da
+
+		PATCH_IF VARIABLE_IS_SET $name_used_map(EVALUATE_BUFFER ~%new%.%type%~) THEN BEGIN
+		        INNER_ACTION BEGIN
+		           ACTION_IF !FILE_EXISTS ~%iwdlists%/rename_number.tpa~ BEGIN
+		              OUTER_SET rename_number=1
+		           END ELSE BEGIN
+		              INCLUDE ~%iwdlists%/rename_number.tpa~ // this sets rename_number to its value
+		              OUTER_SET rename_number += 1
+		           END
+			   OUTER_SPRINT ~new~ ~#%rename_number%~
+			   <<<<<<<< rename_number.tpa
+		           OUTER_SET rename_number=~%rename_number%~
+			   >>>>>>>>
+			   COPY rename_number.tpa ~%iwdlists%~ EVALUATE_BUFFER
+			END
+		END
+
+	/// record the new name
+
+                PATCH_PRINT ~%old% renamed to %new%~
+                INNER_ACTION BEGIN
+                   APPEND_OUTER ~%iwdlists%/rename_record.2da~ ~%old%.%type% %new%.%type%~
+                END
+	END
+END
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//// Redefined PRO files, to ensure resources are renamed or copied
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+DEFINE_PATCH_FUNCTION ~PRO_travel_wav~ STR_VAR arguments="" BEGIN
+ PATCH_IF (~%arguments%~ STRING_COMPARE ~~ & ~%arguments%~ STRING_COMPARE_CASE ~none~) BEGIN
+   LPF auto_rename_log STR_VAR old=EVALUATE_BUFFER ~%arguments%~ type=wav loc_old=real_override loc_new=~biff/spl_snd~ RET new=new END
+   LPF ~PRO_travel_wav0~ STR_VAR arguments=EVALUATE_BUFFER ~%new%~ END
+ END
+END
+
+DEFINE_PATCH_FUNCTION ~PRO_trigger_wav~ STR_VAR arguments="" BEGIN
+ PATCH_IF ~%arguments%~ STRING_COMPARE ~~ BEGIN
+   LPF auto_rename_log STR_VAR old=EVALUATE_BUFFER ~%arguments%~ type=wav loc_old=real_override loc_new=~biff/spl_snd~ RET new=new END
+   LPF ~PRO_trigger_wav0~ STR_VAR arguments=EVALUATE_BUFFER ~%new%~ END
+ END
+END
+
+DEFINE_PATCH_FUNCTION ~PRO_arrive_wav~ STR_VAR arguments="" BEGIN
+ PATCH_IF (~%arguments%~ STRING_COMPARE ~~ & ~%arguments%~ STRING_COMPARE_CASE ~none~) BEGIN
+   LPF auto_rename_log STR_VAR old=EVALUATE_BUFFER ~%arguments%~ type=wav loc_old=real_override loc_new=~biff/spl_snd~ RET new=new END
+   LPF ~PRO_arrive_wav0~ STR_VAR arguments=EVALUATE_BUFFER ~%new%~ END
+ END
+END
+
+DEFINE_PATCH_FUNCTION PRO_travel_anim STR_VAR arguments="" BEGIN
+ PATCH_IF (~%arguments%~ STRING_COMPARE ~~ & ~%arguments%~ STRING_COMPARE_CASE ~none~) BEGIN
+   INNER_ACTION BEGIN
+   COPY ~%iwdfiles%/override/%arguments%.bam~ ~%iwdfiles%/biff/spl_anim~
+   END
+   LPF PRO_travel_anim0 STR_VAR arguments END
+ END
+END
+DEFINE_PATCH_FUNCTION PRO_shadow_anim STR_VAR arguments="" BEGIN
+ PATCH_IF (~%arguments%~ STRING_COMPARE ~~ & ~%arguments%~ STRING_COMPARE_CASE ~none~) BEGIN
+   INNER_ACTION BEGIN
+   COPY ~%iwdfiles%/override/%arguments%.bam~ ~%iwdfiles%/biff/spl_anim~
+   END
+   LPF PRO_shadow_anim0 STR_VAR arguments END
+ END
+END
+DEFINE_PATCH_FUNCTION PRO_trail_anim1 STR_VAR arguments="" BEGIN
+ PATCH_IF (~%arguments%~ STRING_COMPARE ~~ & ~%arguments%~ STRING_COMPARE_CASE ~none~) BEGIN
+   INNER_ACTION BEGIN
+   COPY ~%iwdfiles%/override/%arguments%.bam~ ~%iwdfiles%/biff/spl_anim~
+   END
+   LPF PRO_trail_anim10 STR_VAR arguments END
+ END
+END
+DEFINE_PATCH_FUNCTION PRO_trail_anim2 STR_VAR arguments="" BEGIN
+ PATCH_IF (~%arguments%~ STRING_COMPARE ~~ & ~%arguments%~ STRING_COMPARE_CASE ~none~) BEGIN
+   INNER_ACTION BEGIN
+   COPY ~%iwdfiles%/override/%arguments%.bam~ ~%iwdfiles%/biff/spl_anim~
+   END
+   LPF PRO_trail_anim20 STR_VAR arguments END
+ END
+END
+DEFINE_PATCH_FUNCTION PRO_trail_anim3 STR_VAR arguments="" BEGIN
+ PATCH_IF (~%arguments%~ STRING_COMPARE ~~ & ~%arguments%~ STRING_COMPARE_CASE ~none~) BEGIN
+   INNER_ACTION BEGIN
+   COPY ~%iwdfiles%/override/%arguments%.bam~ ~%iwdfiles%/biff/spl_anim~
+   END
+   LPF PRO_trail_anim30 STR_VAR arguments END
+ END
+END
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//// Redefined VVC files, to ensure resources are renamed or copied
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+DEFINE_PATCH_FUNCTION ~VVC_anim~ STR_VAR arguments="" BEGIN
+ PATCH_IF (~%arguments%~ STRING_COMPARE ~~ & ~%arguments%~ STRING_COMPARE_CASE ~none~) BEGIN
+   INNER_ACTION BEGIN
+   COPY ~%iwdfiles%/override/%arguments%.bam~ ~%iwdfiles%/biff/spl_anim~
+   END
+   LPF ~VVC_anim0~ STR_VAR arguments=EVALUATE_BUFFER ~%new%~ END
+ END
+END
+
+
+DEFINE_PATCH_FUNCTION ~VVC_wav_start~ STR_VAR arguments="" BEGIN
+ PATCH_IF (~%arguments%~ STRING_COMPARE ~~ & ~%arguments%~ STRING_COMPARE_CASE ~none~) BEGIN
+   LPF auto_rename_log STR_VAR old=EVALUATE_BUFFER ~%arguments%~ type=wav loc_old=real_override loc_new=~biff/spl_snd~ RET new=new END
+   LPF ~VVC_wav_start0~ STR_VAR arguments=EVALUATE_BUFFER ~%new%~ END
+ END
+END
+
+DEFINE_PATCH_FUNCTION ~VVC_wav_middle~ STR_VAR arguments="" BEGIN
+ PATCH_IF (~%arguments%~ STRING_COMPARE ~~ & ~%arguments%~ STRING_COMPARE_CASE ~none~) BEGIN
+   LPF auto_rename_log STR_VAR old=EVALUATE_BUFFER ~%arguments%~ type=wav loc_old=real_override loc_new=~biff/spl_snd~ RET new=new END
+   LPF ~VVC_wav_middle0~ STR_VAR arguments=EVALUATE_BUFFER ~%new%~ END
+ END
+END
+
+DEFINE_PATCH_FUNCTION ~VVC_wav_end~ STR_VAR arguments="" BEGIN
+ PATCH_IF (~%arguments%~ STRING_COMPARE ~~ & ~%arguments%~ STRING_COMPARE_CASE ~none~) BEGIN
+   LPF auto_rename_log STR_VAR old=EVALUATE_BUFFER ~%arguments%~ type=wav loc_old=real_override loc_new=~biff/spl_snd~ RET new=new END
+   LPF ~VVC_wav_end0~ STR_VAR arguments=EVALUATE_BUFFER ~%new%~ END
+ END
+END
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//// Read in info stored in a key=>value list or in two columns (the file is ~%ass_arr_to_read%.2da~ and is located in ~%ass_arr_loc%~, or in ~%iwdlists%~ if not set; it's stored in
+//// an associative array of the same name
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+DEFINE_ACTION_MACRO read_in_associative_array BEGIN
+
+   ACTION_IF !VARIABLE_IS_SET EVALUATE_BUFFER ~%ass_arr_to_read%~ BEGIN
+     ACTION_IF !VARIABLE_IS_SET ass_arr_loc BEGIN
+            OUTER_SPRINT ass_arr_loc ~%iwdlists%~
+     END
+       COPY ~%ass_arr_loc%/%ass_arr_to_read%.2da~ ~%workspace%~
+         REPLACE_TEXTUALLY ~"~ ~~
+         REPLACE_TEXTUALLY "~" ""
+         REPLACE_TEXTUALLY ~=>~ ~ ~
+         COUNT_2DA_ROWS 2 rowcount
+         FOR (i=0;i<rowcount;i+=1) BEGIN
+              READ_2DA_ENTRY i 0 2 key
+              READ_2DA_ENTRY i 1 2 val
+              SPRINT $EVALUATE_BUFFER ~%ass_arr_to_read%~(~%key%~) ~%val%~
+         END
+       BUT_ONLY
+       OUTER_SET EVALUATE_BUFFER ~%ass_arr_to_read%~=1
+   END
+END
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//// Read in info stored in a single column (the file is ~%col_arr_to_read%.2da~ and is located in ~%col_arr_loc%~, or in ~%iwdlists%~ if not set; it's stored in
+//// a Nythrun-style list of the same name. STORE AS LOWER CASE
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+DEFINE_ACTION_MACRO read_in_columnar_array BEGIN
+   ACTION_IF !VARIABLE_IS_SET EVALUATE_BUFFER ~%col_arr_to_read%~ BEGIN
+     ACTION_IF !VARIABLE_IS_SET col_arr_loc BEGIN
+            OUTER_SPRINT col_arr_loc ~%iwdlists%~
+     END
+       COPY ~%col_arr_loc%/%col_arr_to_read%.2da~ ~%workspace%~
+         COUNT_2DA_ROWS 1 rowcount
+         FOR (i=0;i<rowcount;i+=1) BEGIN
+              READ_2DA_ENTRY i 0 1 val
+              TO_LOWER val
+              SPRINT $EVALUATE_BUFFER ~%col_arr_to_read%~(~%val%~) ~~
+         END
+       BUT_ONLY
+       OUTER_SET EVALUATE_BUFFER ~%col_arr_to_read%~=1
+   END
+
+
+
+END
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//// Editors localised to iwd spell locations
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+DEFINE_ACTION_FUNCTION edit_spell_iwd
+    STR_VAR spell=""
+            edits=""
+            editstring=""
+BEGIN
+   LAF edit_spell STR_VAR spell edits editstring location=EVALUATE_BUFFER ~%iwdfiles%/spl~ END
+END
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//// String updater
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+DEFINE_PATCH_FUNCTION update_this_string 
+       INT_VAR offset=0
+BEGIN
+       READ_LONG offset old
+       PATCH_IF (old>0 && old < 100000) BEGIN // no -1, no "Beetle", general sanity check
+          SET new=old+iwd_offset
+          WRITE_LONG offset new
+       END
+END

@@ -1,0 +1,41 @@
+[MBFI]
+***
+                       SOUND
+ATTACK          		 beetl03a beetl03b beetl11
+ATTACK          		 0 0 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 bomba07 bomba08
+DAMAGE           		 0 0
+DIE                   		 bomba09a bomba09b
+DIE                   		 0 0
+HEAD_TURN            		 bomba11 nosound nosound nosound nosound
+HEAD_TURN                      2 0 0 0 0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	***
+ATTACK_SLASH                  	0
+ATTACK_BACKSLASH           	***
+ATTACK_BACKSLASH           	0
+ATTACK_JAB            		***
+ATTACK_JAB            		0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		 bf_sm01 bf_sm02 bf_sm03 bf_sm04 bf_sm05
+SLEEP            		 0 0 0 0 0
+Battle_Cry           		 bomba01 bomba02
+Battle_Cry           		 0 0
+Selection            		 bomba01 bomba02
+Selection            		 0 0

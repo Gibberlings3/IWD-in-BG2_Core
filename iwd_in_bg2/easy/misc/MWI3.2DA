@@ -1,0 +1,41 @@
+[MWI3]
+***
+                       SOUND
+ATTACK          		 wig303a wig303b
+ATTACK          		 0 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 wig307a wig307b wig308a wig308b
+DAMAGE           		 0 0 0 0
+DIE                   		 wig309a wig309b
+DIE                   		 0 0
+HEAD_TURN            		 wig311 nosound
+HEAD_TURN                      2 0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	 wig304a wig304b
+ATTACK_SLASH                  	 0 0
+ATTACK_BACKSLASH           	 wig304a wig304b
+ATTACK_BACKSLASH           	 0 0
+ATTACK_JAB            		***
+ATTACK_JAB            		0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		 bf_sm01 bf_sm02 bf_sm03 bf_sm04 bf_sm05
+SLEEP            		 0 0 0 0 0
+Battle_Cry           		 wig301 wig302
+Battle_Cry           		 0 0
+Selection            		 wig301 wig302
+Selection            		 0 0

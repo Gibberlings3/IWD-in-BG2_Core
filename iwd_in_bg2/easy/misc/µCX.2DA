@@ -1,0 +1,41 @@
+[µCX]
+***
+                       SOUND
+ATTACK          		 golem03
+ATTACK          		 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 golem07 golem08
+DAMAGE           		 0 0
+DIE                   		 golem09a golem09b golem10a golem10b
+DIE                   		 0 0 0 0
+HEAD_TURN            		 golem11 nosound nosound
+HEAD_TURN                      2 0 0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	 golem04
+ATTACK_SLASH                  	 0
+ATTACK_BACKSLASH           	 golem04
+ATTACK_BACKSLASH           	 0
+ATTACK_JAB            		***
+ATTACK_JAB            		0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		 bf_md01 bf_md02 bf_md03 bf_md04 bf_md05 bf_md06
+SLEEP            		 0 0 0 0 0 0
+Battle_Cry           		 golem01 golem02a golem02b
+Battle_Cry           		 0 0 0
+Selection            		 golem01 golem02a golem02b
+Selection            		 0 0 0

@@ -1,0 +1,46 @@
+@100000 = ~Icewind Dale in Baldur's Gate II~
+@100001 = ~It appears you have already extracted your Icewind Dale resources. It is not necessary 
+to re-extract them, but you may do so if something has changed on your Icewind Dale installation.
+  a) No, do not extract Icewind Dale resources again
+  b) Yes, extract Icewind Dale resources again~
+@100002 = ~Repeat post-merge bat stuff?
+  a) No
+  b) Yes~
+
+@200000 = ~Blood Rage~
+@200001 = ~Shroud of Flame~
+@200002 = ~Harpy Wail~
+@200003 = ~Salamander Aura~
+
+@300001 = ~Proficiency Type: ~
+@300002 = ~Thief~
+
+
+@40003 = ~
+Whirlwind
+Level: 6
+Range: 35 Yards
+Duration: 5 rounds
+Casting Time: 9
+Area of Effect: 20' radius area
+Saving Throw: Special
+
+This spell creates a small whirlwind, which the caster can direct to a location within his sight. This newly formed whirlwind starts to randomly wander around the target area, hurling away every creature in its path, be it friend or foe. Those who cannot escape automatically suffer 2d8 crushing and 2d8 slashing damage, and must save vs. breath or fall uncounscious for two rounds. The whirlwind instantly kills creatures with less than 3 Hit Dice.
+
+Once a whirlwind has been summoned the druid has no control over these raging winds, so this spell must be used with caution.~
+
+
+@500000 = ~Sleep outside in these parts, friend, and you'll die of exposure. Better find an inn if you want to rest.~
+
+@600000 = ~Outer Planar Destroyed~
+
+@700000 = ~You may choose <number> spells to put in your spell book.  These will be the spells that your character currently has knowledge of at the beginning of the game.
+
+If your character is a specialist mage, you must pick at least one spell from their speciality school before continuing on.~
+
+@700001 = ~You must select a spell from your speciality school for your remaining choice. ~
+
+@800000 = ~The tutorial is not available in IWD-in-BG2.~
+@800001 = ~You have successfully installed Icewind Dale In Baldur's Gate II!
+
+You can play either the whole saga (click "Icewind Dale") or just the Heart of Winter expansion. If you want to create more than one character (which you are strongly recommended to do unless you play with the NPCs in Kulyok's IWDNPC mod, in IceTutuTweaks, or in other mods), you are advised to create your party, immediately save the game, move the save-game folder from "mpsave" to "save", and then reload it as a single-player game. Only play in multi-player mode if you actually want to play with another person.~

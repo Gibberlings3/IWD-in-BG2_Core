@@ -1,0 +1,41 @@
+[µBV]
+***
+                       SOUND
+ATTACK          		 BELHIF3A BELHIF3B BELHIF3C
+ATTACK          		 0 0 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 BELHIF7A BELHIF7B BELHIF8A BELHIF8B
+DAMAGE           		 0 0 0 0
+DIE                   		 BELHIF9
+DIE                   		 0
+HEAD_TURN            		***
+HEAD_TURN                     0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	 BELHIF4A BELHIF4B BELHIF4C
+ATTACK_SLASH                  	 0 0 0
+ATTACK_BACKSLASH           	 BELHIF4A BELHIF4B BELHIF4C
+ATTACK_BACKSLASH           	 0 0 0
+ATTACK_JAB            		***
+ATTACK_JAB            		0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		 bf_sm01 bf_sm02 bf_sm03 bf_sm04 bf_sm05
+SLEEP            		 0 0 0 0 0
+Battle_Cry           		 BELHIF1A BELHIF1B BELHIF2A BELHIF2B
+Battle_Cry           		 0 0 0 0
+Selection            		 BELHIF1A BELHIF1B BELHIF2A BELHIF2B
+Selection            		 0 0 0 0

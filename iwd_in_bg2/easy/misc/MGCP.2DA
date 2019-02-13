@@ -1,0 +1,41 @@
+Mgcp/tundra,yeti (originally panther)
+***
+						SOUND
+ATTACK          		yeti03 yeti04 yeti04
+ATTACK          		2 0 0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		yeti07 yeti08
+DAMAGE          		0 0
+DIE             		yeti09
+DIE             		0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		yeti11A YETI11B
+TWITCH          		0 0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		yeti03 nosound nosound
+ATTACK_SLASH    		2 0 0
+ATTACK_BACKSLASH		yeti04 nosound nosound
+ATTACK_BACKSLASH		2 0 0
+ATTACK_JAB      		yeti04 nosound nosound
+ATTACK_JAB      		2 0 0
+EMERGE          		***
+EMERGE          		0
+HIDE            		***
+HIDE            		0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry			yeti01 yeti02 nosound nosound
+Battle_Cry			0 0 0 0
+Selection                       yeti01 yeti02
+Selection                       0 0

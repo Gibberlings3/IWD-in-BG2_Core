@@ -1,0 +1,41 @@
+[MLER]
+***
+                       SOUND
+ATTACK          		 lerel03A LEREL03B
+ATTACK          		 0 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 lerel07 lerel08
+DAMAGE           		 0 0
+DIE                   		 lerel09
+DIE                   		 0
+HEAD_TURN            		 lerel11
+HEAD_TURN                      0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	 lerel04A LEREL04B
+ATTACK_SLASH                  	 0 0
+ATTACK_BACKSLASH           	 lerel04A LEREL04B
+ATTACK_BACKSLASH           	 0 0
+ATTACK_JAB            		***
+ATTACK_JAB            		0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		 bf_sm01 bf_sm02 bf_sm03 bf_sm04 bf_sm05
+SLEEP            		 0 0 0 0 0
+Battle_Cry           		 lerel01A LEREL01B
+Battle_Cry           		 0 0
+Selection            		 lerel01A LEREL01B
+Selection            		 0 0

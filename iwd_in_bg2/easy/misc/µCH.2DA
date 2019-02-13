@@ -1,0 +1,41 @@
+[µCH]
+***
+                       SOUND
+ATTACK          		 LGSAH03
+ATTACK          		 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 LGSAH07 LGSAH08 nosound
+DAMAGE           		 2 2 0
+DIE                   		 LGSAH09 LGSAH10 nosound
+DIE                   		 2 2 0
+HEAD_TURN            		***
+HEAD_TURN                     0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	 LGSAH03
+ATTACK_SLASH                  	 0
+ATTACK_BACKSLASH           	 LGSAH04
+ATTACK_BACKSLASH           	 0
+ATTACK_JAB            		 LGSAH06
+ATTACK_JAB            		 0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		***
+SLEEP            		0
+Battle_Cry           		 LGSAH01 LGSAH02
+Battle_Cry           		 0 0
+Selection            		***
+Selection            		0

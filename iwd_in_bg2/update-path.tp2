@@ -1,0 +1,15 @@
+BACKUP ~iwd_in_bg2/backup~
+AUTHOR ~blah~
+
+BEGIN ~Update path~ NO_LOG_RECORD
+
+OUTER_SPRINT ~newloc~ ~%argv[0]%~
+OUTER_SPRINT ~oldloc~ ~%argv[1]%~
+
+OUTER_INNER_PATCH_SAVE ~oldloc2~ ~%oldloc%~ BEGIN
+   REPLACE_TEXTUALLY ~\/~ ~\\~
+END
+
+COPY ~iwd_in_bg2/easy/baldur.ini~ ~baldur.ini~
+           REPLACE_TEXTUALLY CASE_INSENSITIVE  ~OLDPATH~ ~%oldloc2%~
+           REPLACE_TEXTUALLY CASE_INSENSITIVE  ~NEWPATH~ ~%newloc%~

@@ -1,0 +1,41 @@
+[µBR]
+***
+                       SOUND
+ATTACK          		 gfrst03a gfrst03b
+ATTACK          		 0 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 gfrst07 gfrst08
+DAMAGE           		 0 0
+DIE                   		 gfrst09 gfrst10
+DIE                   		 0 0
+HEAD_TURN            		 gfrst11a gfrst11b nosound nosound
+HEAD_TURN                      2 2 0 0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	 gfrst04a gfrst04b
+ATTACK_SLASH                  	 0 0
+ATTACK_BACKSLASH           	 gfrst04a gfrst04b
+ATTACK_BACKSLASH           	 0 0
+ATTACK_JAB            		***
+ATTACK_JAB            		0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		 bf_lg01 bf_lg02 bf_lg03 bf_lg04 bf_lg05 bf_lg06
+SLEEP            		 0 0 0 0 0 0
+Battle_Cry           		 gfrst01 gfrst02
+Battle_Cry           		 0 0
+Selection            		 gfrst01 gfrst02
+Selection            		 0 0

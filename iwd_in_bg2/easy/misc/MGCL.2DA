@@ -1,0 +1,41 @@
+Mgcl/verbeeg (originally leopard)
+***
+						SOUND
+ATTACK          		verbee03 verbee04 verbee04
+ATTACK          		2 0 0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		verbee07 verbee08
+DAMAGE          		0 0
+DIE             		verbee09
+DIE             		0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		verbee11
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		verbee03 nosound nosound
+ATTACK_SLASH    		2 0 0
+ATTACK_BACKSLASH		verbee04 nosound nosound
+ATTACK_BACKSLASH		2 0 0
+ATTACK_JAB      		verbee04 nosound nosound
+ATTACK_JAB      		2 0 0
+EMERGE          		***
+EMERGE          		0
+HIDE            		***
+HIDE            		0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry			verbee01 verbee02
+Battle_Cry			0 0
+Selection                       verbee01 verbee02
+Selection                       0 0

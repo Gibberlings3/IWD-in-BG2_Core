@@ -1,0 +1,41 @@
+[MLI2]
+***
+                       SOUND
+ATTACK          		 lizon03a lizon03b
+ATTACK          		 0 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 lizon07 lizon08
+DAMAGE           		 0 0
+DIE                   		 lizon09 lizon10
+DIE                   		 0 0
+HEAD_TURN            		 lizon11b nosound nosound nosound
+HEAD_TURN                      2 0 0 0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	 lizon04a lizon04b
+ATTACK_SLASH                  	 0 0
+ATTACK_BACKSLASH           	 lizon04a lizon04b
+ATTACK_BACKSLASH           	 0 0
+ATTACK_JAB            		***
+ATTACK_JAB            		0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		 bf_md01 bf_md02 bf_md03 bf_md04 bf_md05 bf_md06
+SLEEP            		 0 0 0 0 0 0
+Battle_Cry           		 lizon01 lizon02a lizon02b
+Battle_Cry           		 0 0 0
+Selection            		 lizon01 lizon02a lizon02b
+Selection            		 0 0 0

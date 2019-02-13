@@ -1,0 +1,41 @@
+[MGO1]
+***
+                       SOUND
+ATTACK          		 GOBAXE3A GOBAXE3B
+ATTACK          		 0 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 GOBAXE7 GOBAXE8
+DAMAGE           		 0 0
+DIE                   		 GOBAXE9 GOBAXE10
+DIE                   		 0 0
+HEAD_TURN            		 GOBAXE11 nosound nosound
+HEAD_TURN                      2 0 0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	 GOBAXE4A GOBAXE4B
+ATTACK_SLASH                  	 0 0
+ATTACK_BACKSLASH           	 GOBAXE4A GOBAXE4B
+ATTACK_BACKSLASH           	 0 0
+ATTACK_JAB            		***
+ATTACK_JAB            		0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		 bf_lg01 bf_lg02 bf_lg03 bf_lg04 bf_lg05 bf_lg06
+SLEEP            		 0 0 0 0 0 0
+Battle_Cry           		 GOBAXE1 GOBAXE2
+Battle_Cry           		 0 0
+Selection            		 GOBAXE1 GOBAXE2
+Selection            		 0 0

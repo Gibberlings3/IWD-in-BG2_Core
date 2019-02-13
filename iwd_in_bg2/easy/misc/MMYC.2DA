@@ -1,0 +1,41 @@
+[MMYC]
+***
+                       SOUND
+ATTACK          		 mycon03
+ATTACK          		 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 mycon07 mycon08
+DAMAGE           		 0 0
+DIE                   		 mycon09 mycon10
+DIE                   		 0 0
+HEAD_TURN            		***
+HEAD_TURN                     0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	 mycon04
+ATTACK_SLASH                  	 0
+ATTACK_BACKSLASH           	 mycon05
+ATTACK_BACKSLASH           	 0
+ATTACK_JAB            		 mycon06
+ATTACK_JAB            		 0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		 bf_md01 bf_md02 bf_md03 bf_md04 bf_md05 bf_md06
+SLEEP            		 0 0 0 0 0 0
+Battle_Cry           		 mycon01 mycon02
+Battle_Cry           		 0 0
+Selection            		 mycon01 mycon02
+Selection            		 0 0

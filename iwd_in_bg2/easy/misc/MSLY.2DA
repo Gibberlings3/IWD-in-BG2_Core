@@ -1,0 +1,41 @@
+Msly/Scrag Troll (originnaly Slayer)
+***
+						SOUND
+ATTACK          		SCRAG03 SCRAG03 SCRAG04
+ATTACK          		2 0 0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		SCRAG07 SCRAG08
+DAMAGE          		0 0
+DIE             		SCRAG09 SCRAG10
+DIE             		0 0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		SCRAG03 nosound
+ATTACK_SLASH    		2 0
+ATTACK_BACKSLASH		SCRAG03 nosound
+ATTACK_BACKSLASH		2 0
+ATTACK_JAB      		SCRAG04 nosound
+ATTACK_JAB      		2 0
+EMERGE          		***
+EMERGE          		0
+HIDE            		***
+HIDE            		0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry			SCRAG01 SCRAG02
+Battle_Cry			0 0
+Selection                       nosound
+Selection                       0

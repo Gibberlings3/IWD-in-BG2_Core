@@ -1,0 +1,41 @@
+Mbbr/beetle,boring
+***
+						SOUND
+ATTACK          		beetl03a beetl03b beetl11
+ATTACK          		2 0 0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		beetl07 beetl08
+DAMAGE          		0 0
+DIE             		beetl09
+DIE             		0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		beetl03a nosound nosound
+ATTACK_SLASH    		2 0 0
+ATTACK_BACKSLASH		beetl03b nosound nosound
+ATTACK_BACKSLASH		2 0 0
+ATTACK_JAB      		beetl11 nosound nosound
+ATTACK_JAB      		2 0 0
+EMERGE          		***
+EMERGE          		0
+HIDE            		***
+HIDE            		0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry			beetl01 beetl02a beetl02b
+Battle_Cry			0 0 0
+Selection                       beetl01 beetl02
+Selection                       0 0

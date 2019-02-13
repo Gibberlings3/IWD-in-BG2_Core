@@ -1,0 +1,41 @@
+[µDC]
+***
+                       SOUND
+ATTACK          		 verbee03
+ATTACK          		 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 verbee07 verbee08
+DAMAGE           		 0 0
+DIE                   		 verbee09
+DIE                   		 0
+HEAD_TURN            		 verbee11
+HEAD_TURN                      0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	 verbee04
+ATTACK_SLASH                  	 0
+ATTACK_BACKSLASH           	 verbee04
+ATTACK_BACKSLASH           	 0
+ATTACK_JAB            		***
+ATTACK_JAB            		0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		 bf_lg01 bf_lg02 bf_lg03 bf_lg04 bf_lg05 bf_lg06
+SLEEP            		 0 0 0 0 0 0
+Battle_Cry           		 verbee01 verbee02
+Battle_Cry           		 0 0
+Selection            		 verbee01 verbee02
+Selection            		 0 0

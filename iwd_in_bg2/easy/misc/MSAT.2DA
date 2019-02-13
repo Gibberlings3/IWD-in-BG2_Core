@@ -1,0 +1,41 @@
+Msat/Sahuagin (large) (originally Sahaugin large)
+***
+						SOUND
+ATTACK          		LGSAH03 LGSAH04 LGSAH06
+ATTACK          		2 0 0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		LGSAH07 LGSAH08 nosound
+DAMAGE          		0 0 0
+DIE             		LGSAH09 LGSAH10 nosound
+DIE             		0 0 0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		LGSAH03 nosound nosound
+ATTACK_SLASH    		2 0 0
+ATTACK_BACKSLASH		LGSAH04 nosound nosound
+ATTACK_BACKSLASH		2 0 0
+ATTACK_JAB      		LGSAH06 nosound nosound
+ATTACK_JAB      		2 0 0
+EMERGE          		***
+EMERGE          		0
+HIDE            		***
+HIDE            		0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry			LGSAH01 LGSAH02 nosound nosound
+Battle_Cry			0 0 0 0
+Selection                       nosound
+Selection                       0

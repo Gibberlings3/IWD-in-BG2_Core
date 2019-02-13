@@ -1,0 +1,41 @@
+Nire/belhifet,priest (originally jon irenicus)
+***
+						SOUND
+ATTACK          		belprs03 belprs04 belprs04
+ATTACK          		2 0 0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		belprs07 belprs08
+DAMAGE          		0 0
+DIE             		nosound
+DIE             		0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		belprs03 nosound nosound
+ATTACK_SLASH    		2 0 0
+ATTACK_BACKSLASH		belprs04 nosound nosound
+ATTACK_BACKSLASH		2 0 0
+ATTACK_JAB      		belprs04 nosound nosound
+ATTACK_JAB      		2 0 0
+EMERGE          		***
+EMERGE          		0
+HIDE            		***
+HIDE            		0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry			nosound nosound
+Battle_Cry			0 0
+Selection                       nosound
+Selection                       0

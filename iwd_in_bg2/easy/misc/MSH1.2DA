@@ -1,0 +1,41 @@
+[MSH1]
+***
+                       SOUND
+ATTACK          		 shadw03a shadw03b
+ATTACK          		 0 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 shadw07 shadw08
+DAMAGE           		 0 0
+DIE                   		 shadw09 shadw10a shadw10b
+DIE                   		 0 0 0
+HEAD_TURN            		***
+HEAD_TURN                     0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	 shadw04a shadw04b
+ATTACK_SLASH                  	 0 0
+ATTACK_BACKSLASH           	 shadw04a shadw04b
+ATTACK_BACKSLASH           	 0 0
+ATTACK_JAB            		***
+ATTACK_JAB            		0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		***
+SLEEP            		0
+Battle_Cry           		 shadw01a shadw01b
+Battle_Cry           		 0 0
+Selection            		 shadw01a shadw01b
+Selection            		 0 0

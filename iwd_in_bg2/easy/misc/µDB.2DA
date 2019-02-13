@@ -1,0 +1,41 @@
+[µDB]
+***
+                       SOUND
+ATTACK          		 VODYA03
+ATTACK          		 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 VODYA07 VODYA08
+DAMAGE           		 0 0
+DIE                   		 VODYA09 VODYA10
+DIE                   		 0 0
+HEAD_TURN            		 VODYA11
+HEAD_TURN                      0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	 VODYA03
+ATTACK_SLASH                  	 0
+ATTACK_BACKSLASH           	 VODYA04
+ATTACK_BACKSLASH           	 0
+ATTACK_JAB            		***
+ATTACK_JAB            		0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		***
+SLEEP            		0
+Battle_Cry           		 VODYA01
+Battle_Cry           		 0
+Selection            		***
+Selection            		0

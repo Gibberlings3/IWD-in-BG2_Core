@@ -1,0 +1,87 @@
+BACKUP ~override~
+AUTHOR ~DavidW~
+
+
+BEGIN ~Copy over IWD files~ 
+
+NO_LOG_RECORD
+
+OUTER_SPRINT ~CONVPATH~ ~%argv[0]%~
+
+OUTER_SET ~missingfile~=0
+
+<<<<<<<< missing_files.2da
+>>>>>>>>
+
+COPY missing_files.2da ~%CONVPATH%\iwd_in_bg2\lib~
+
+/// sanity check for TIS and WED files
+
+ACTION_BASH_FOR ~%CONVPATH%\iwd_in_bg2\new_map~ ~.*\.mos~ BEGIN
+   ACTION_IF !FILE_EXISTS_IN_GAME ~%BASH_FOR_RES%.tis~ BEGIN
+         OUTER_SET ~missingfile~=1
+         APPEND_OUTER ~%CONVPATH%\iwd_in_bg2\lib\missing_files.2da~ ~%BASH_FOR_RES%.TIS~
+   END
+   ACTION_IF !FILE_EXISTS_IN_GAME ~%BASH_FOR_RES%.wed~ BEGIN
+         OUTER_SET ~missingfile~=1
+         APPEND_OUTER ~%CONVPATH%\iwd_in_bg2\lib\missing_files.2da~ ~%BASH_FOR_RES%.WED~
+   END
+END
+
+/// sanity check for MVE files
+
+ACTION_FOR_EACH movie IN
+avalanch bislogo credits ecredit howdrag
+howseer intro return scry tower tsrlogo wotc
+BEGIN
+   ACTION_IF !FILE_EXISTS_IN_GAME ~%movie%.mve~ BEGIN
+         OUTER_SET ~missingfile~=1
+         APPEND_OUTER ~%CONVPATH%\iwd_in_bg2\lib\missing_files.2da~ ~%movie%.mve~
+   END
+END
+
+   COPY - ~%CONVPATH%\iwd_in_bg2\lib\biff_file_list.2da~ ~override~
+           READ_2DA_ENTRIES_NOW reslist 0
+           FOR (i=0;i<reslist;i=i+1) BEGIN
+              READ_2DA_ENTRY_FORMER reslist i 0 resname
+              READ_2DA_ENTRY_FORMER reslist i 1 resdest
+              INNER_ACTION BEGIN
+                  ACTION_IF FILE_EXISTS_IN_GAME ~%resname%~ BEGIN
+                     COPY_EXISTING ~%resname%~ ~%CONVPATH%\%resdest%~
+                  END ELSE BEGIN
+                     ACTION_IF !(~%resname%~ STRING_EQUAL_CASE ~SPPRISMT.BAM~ OR ~%resname%~ STRING_EQUAL_CASE ~spprism3.bam~ OR ~%resname%~ STRING_EQUAL_CASE ~spprism2.bam~ OR ~%resname%~ STRING_EQUAL_CASE ~spccoldl.bam~   OR ~%resname%~ STRING_EQUAL_CASE ~spgflsh1.bam~ OR ~%resname%~ STRING_EQUAL_CASE ~mbaide.bam~ OR ~%resname%~ STRING_EQUAL_CASE ~mbaidee.bam~) BEGIN
+                        OUTER_SET ~missingfile~=1
+                        APPEND_OUTER ~%CONVPATH%\iwd_in_bg2\lib\missing_files.2da~ ~%resname%~
+                     END
+                  END
+              END
+           END
+   BUT_ONLY
+
+   COPY - ~%CONVPATH%\iwd_in_bg2\lib\guilist.2da~ ~override~
+           READ_2DA_ENTRIES_NOW reslist 0
+           FOR (i=0;i<reslist;i=i+1) BEGIN
+              READ_2DA_ENTRY_FORMER reslist i 0 resname
+              INNER_ACTION BEGIN
+                  ACTION_IF FILE_EXISTS_IN_GAME ~%resname%~ BEGIN
+                     COPY_EXISTING ~%resname%~ ~%CONVPATH%\iwd_in_bg2\biff\gui~
+                  END ELSE BEGIN
+                     OUTER_SET ~missingfile~=1
+                     APPEND_OUTER ~%CONVPATH%\iwd_in_bg2\lib\missing_files.2da~ ~%resname%~
+                  END
+              END
+           END
+   BUT_ONLY
+
+
+ACTION_IF ~missingfile~=1 BEGIN
+   COPY ~missing_files.2da~ ~%CONVPATH%\iwd_in_bg2\lib\file_missing_marker.txt~
+   PRINT ~Some files are missing - check iwd_in_bg2/lib/missing_files for details. Install will fail.~
+   PRINT ~Press ENTER to exit~
+   ACTION_READLN ~cat~
+END ELSE BEGIN
+   PRINT ~All files successfully copied over~
+END
+
+
+

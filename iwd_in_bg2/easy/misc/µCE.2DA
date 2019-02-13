@@ -1,0 +1,41 @@
+[µCE]
+***
+                       SOUND
+ATTACK          		 fire03a fire03b
+ATTACK          		 0 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 fire07a fire07b fire08a fire08b
+DAMAGE           		 0 0 0 0
+DIE                   		 fire09a fire09b fire10a fire10b
+DIE                   		 0 0 0 0
+HEAD_TURN            		***
+HEAD_TURN                     0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	 fire04a fire04b
+ATTACK_SLASH                  	 0 0
+ATTACK_BACKSLASH           	 fire04a fire04b
+ATTACK_BACKSLASH           	 0 0
+ATTACK_JAB            		***
+ATTACK_JAB            		0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		 bf_md01 bf_md02 bf_md03 bf_md04 bf_md05 bf_md06
+SLEEP            		 0 0 0 0 0 0
+Battle_Cry           		 fire01a fire01b fire02a fire02b
+Battle_Cry           		 0 0 0 0
+Selection            		 fire01a fire01b fire02a fire02b
+Selection            		 0 0 0 0

@@ -1,0 +1,33 @@
+2DA V1.0
+0
+                        FIRST_LEVEL     RATE      CHANGE_LEVEL   NEW_RATE
+MAGE                    -1              1         99             1
+FIGHTER                 -1              1         99             1
+CLERIC                  -1              1         99             1
+THIEF                   -1              1	  99             1
+BARD                    -1              1         99             1
+PALADIN                 -1              1         99             1
+DRUID                   -1              1         99             1
+RANGER                  -1              1         99             1
+FIGHTER_MAGE            -1              1         99             1
+FIGHTER_CLERIC          -1              1         99             1
+FIGHTER_THIEF           -1              1         99             1
+FIGHTER_MAGE_THIEF      -1              1         99             1
+MAGE_THIEF              -1              1         99             1
+CLERIC_MAGE             -1              1         99             1
+CLERIC_THIEF            -1              1         99             1
+FIGHTER_DRUID           -1              1         99             1
+FIGHTER_MAGE_CLERIC     -1              1         99             1
+CLERIC_RANGER           -1              1         99             1
+SORCERER                -1              1         99             1
+MONK                    -1              1         30             1
+MULTI2FIGHTER           -1              1         99             1
+MULTI2MAGE              -1              1         99             1
+MULTI2CLERIC            -1              1         99             1
+MULTI2RANGER            -1              1         99             1
+MULTI2DRUID             -1              1         99             1
+MULTI2THIEF             -1              1         99             1
+MULTI3FIGHTER           -1              1         99             1
+MULTI3MAGE              -1              1         99             1
+MULTI3THIEF             -1              1         99             1
+MULTI3CLERIC            -1              1         99             1

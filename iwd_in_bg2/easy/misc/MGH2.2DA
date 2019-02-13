@@ -1,0 +1,41 @@
+[MGH2]
+***
+                       SOUND
+ATTACK          		 ghoul03A GHOUL03B
+ATTACK          		 0 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 ghoul07 ghoul08
+DAMAGE           		 0 0
+DIE                   		 ghoul09 ghoul10
+DIE                   		 0 0
+HEAD_TURN            		 ghoul11 nosound nosound
+HEAD_TURN                      2 0 0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	 ghoul04A GHOUL04B
+ATTACK_SLASH                  	 0 0
+ATTACK_BACKSLASH           	 ghoul04A GHOUL04B
+ATTACK_BACKSLASH           	 0 0
+ATTACK_JAB            		***
+ATTACK_JAB            		0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		 bf_sm01 bf_sm02 bf_sm03 bf_sm04 bf_sm05
+SLEEP            		 0 0 0 0 0
+Battle_Cry           		 ghoul01 ghoul02
+Battle_Cry           		 0 0
+Selection            		 ghoul01 ghoul02
+Selection            		 0 0

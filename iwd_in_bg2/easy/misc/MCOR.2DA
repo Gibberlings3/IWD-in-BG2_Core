@@ -1,0 +1,41 @@
+[MCOR]
+***
+                       SOUND
+ATTACK          		 CORNU03
+ATTACK          		 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 CORNU07 CORNU08
+DAMAGE           		 0 0
+DIE                   		 CORNU09 CORNU10
+DIE                   		 0 0
+HEAD_TURN            		***
+HEAD_TURN                     0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	 CORNU03
+ATTACK_SLASH                  	 0
+ATTACK_BACKSLASH           	 CORNU04
+ATTACK_BACKSLASH           	 0
+ATTACK_JAB            		***
+ATTACK_JAB            		0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		***
+SLEEP            		0
+Battle_Cry           		 CORNU01 CORNU02
+Battle_Cry           		 0 0
+Selection            		***
+Selection            		0

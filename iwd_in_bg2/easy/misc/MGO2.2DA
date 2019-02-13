@@ -1,0 +1,41 @@
+[MGO2]
+***
+                       SOUND
+ATTACK          		 GOBBOW03
+ATTACK          		 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 GOBBOW07 GOBBOW08
+DAMAGE           		 0 0
+DIE                   		 GOBBOW09 GOBBOW10
+DIE                   		 0 0
+HEAD_TURN            		 GOBBOW11 nosound nosound
+HEAD_TURN                      2 0 0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	***
+ATTACK_SLASH                  	0
+ATTACK_BACKSLASH           	***
+ATTACK_BACKSLASH           	0
+ATTACK_JAB            		 GOBBOW06
+ATTACK_JAB            		 0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		 bf_lg01 bf_lg02 bf_lg03 bf_lg04 bf_lg05 bf_lg06
+SLEEP            		 0 0 0 0 0 0
+Battle_Cry           		 GOBBOW01 GOBBOW02
+Battle_Cry           		 0 0
+Selection            		 GOBBOW01 GOBBOW02
+Selection            		 0 0

@@ -1,0 +1,41 @@
+[MEAE]
+***
+                       SOUND
+ATTACK          		 SHAMB03
+ATTACK          		 0
+AWAKE            		***
+AWAKE            		0
+CAST             		***
+CAST             		0
+CONJURE           		***
+CONJURE          		0
+DAMAGE           		 SHAMB06
+DAMAGE           		 0
+DIE                   		 SHAMB07
+DIE                   		 0
+HEAD_TURN            		***
+HEAD_TURN                     0
+READY            		***
+READY            		0
+SHOOT            		***
+SHOOT            		0
+TWITCH                        ***
+TWITCH            		0
+WALK                   		***
+WALK                   		0
+ATTACK_SLASH                  	 SHAMB04
+ATTACK_SLASH                  	 0
+ATTACK_BACKSLASH           	 SHAMB05
+ATTACK_BACKSLASH           	 0
+ATTACK_JAB            		***
+ATTACK_JAB            		0
+EMERGE            		***
+EMERGE            		0
+HIDE                   		***
+HIDE                   		0
+SLEEP            		***
+SLEEP            		0
+Battle_Cry           		 SHAMB01 SHAMB02
+Battle_Cry           		 0 0
+Selection            		***
+Selection            		0
